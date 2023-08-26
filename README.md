@@ -1,3 +1,4 @@
+
 # Teste Técnico
 
 O teste técnico é constituído em 3 partes:
@@ -10,7 +11,7 @@ O teste técnico é constituído em 3 partes:
 
 ## Respostas do questionário
 
-**_1. Qual a saída do algoritmo?_**
+### _1. Qual a saída do algoritmo?_
 
 Ele imprime no console os números primos, dentro de um limite, paginados e ordenados.
 
@@ -279,19 +280,19 @@ Page  5
 </details>
 
 
-**_2. Você julga que este código é limpo? Aponte quais erros o programador cometeu que prejudicaram a qualidade do código. Obs: não existe nenhum bug escondido no código._**
+### _2. Você julga que este código é limpo? Aponte quais erros o programador cometeu que prejudicaram a qualidade do código. Obs: não existe nenhum bug escondido no código._
 
 Não, o código não é um código limpo. A escolha dos nomes (classe, método e variáveis) não é nada descritiva, não sabemos exatamente o que cada coisa está representando no código. Está sendo definido todas as variáveis como let, até mesmo as que tem um valor constante, quando deveria ser usado const no lugar. O código está em um único bloco, tendo mais de uma responsabilidade num único método: ao mesmo tempo que ele verifica os números primos, ele personaliza e formata a saída. Poderia ter comentários no código, explicando o que está sendo feito, ou uma documentação. Não tem nenhum tipo de tratamento de erro ou validação de entradas.
 
-**_3. Refatore o código do arquivo utilizando conceitos de Clean Code, de maneira que o código se torne mais limpo, legível e de fácil manutenção._**
+### _3. Refatore o código do arquivo utilizando conceitos de Clean Code, de maneira que o código se torne mais limpo, legível e de fácil manutenção._
 
 Código refatorado no arquivo _main.js_ na raiz do repositório.
 
-**_4. Explique como o conceito de middlewares no Express.js pode ser utilizado para evitar repetição de código._**
+### _4. Explique como o conceito de middlewares no Express.js pode ser utilizado para evitar repetição de código._
 
 Os middlewares no Express.js são blocos de código executados em sequência nas requisições HTTP. Os middlewares ajudam muito a evitar repetições de código quando utilizamos uma mesma lógica para várias rotas, por exemplo os middlewares de autenticação de usuários e de tratamento de erros, implementando um middleware, você o chama nas rotas necessárias, ou globalmente na aplicação. Assim, quando você faz uma requisição HTTP, ele primeiro lê os middlewares (na sequência declarada no código) e depois processa a requisição de fato. Em outras palavras, os middlewares no Express.js permitem escrever um código mais limpo, sem repetição em várias rotas. Outra vantagem de utilizar middlewares é a fácil manutenção, já que você só precisará alterar o código num único lugar.
 
-**_5. Tendo em vista duas abordagens de backend: uma utilizando um ORM (como Prisma e Sequelize) e outra utilizando apenas um query builder (como o Knex), quais as vantagens e desvantagens de cada abordagem?_**
+### _5. Tendo em vista duas abordagens de backend: uma utilizando um ORM (como Prisma e Sequelize) e outra utilizando apenas um query builder (como o Knex), quais as vantagens e desvantagens de cada abordagem?_
 
 **ORM**
 
@@ -316,7 +317,7 @@ Desvantagens:
 - Exige manutenções manuais, como migrações e mapeamento de objetos.
 - Mais vulnerável a ataques, como injeção de SQL, se não for usado com cuidado.
 
-**_6. Faça uma query em SQL que traga em cada linha o nome de jogadores que se enfrentaram mais de duas vezes, onde em cada partida a soma dos pontos foi maior que 30 e a duração do jogo foi maior que 90 minutos. Não pode haver resultados repetidos._**
+### _6. Faça uma query em SQL que traga em cada linha o nome de jogadores que se enfrentaram mais de duas vezes, onde em cada partida a soma dos pontos foi maior que 30 e a duração do jogo foi maior que 90 minutos. Não pode haver resultados repetidos._
 
 ```SQL
 SELECT DISTINCT  j1.nome  AS jogador1 , j2.nome  AS jogador2
