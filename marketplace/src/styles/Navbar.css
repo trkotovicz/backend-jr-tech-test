@@ -1,0 +1,30 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.nav-text-container {
+  font-size: 12px;
+  /* margin-top: 6px; */
+  margin-bottom: 16px;
+  padding-bottom: 6px;
+  background-color: #000;
+  color: rgb(196, 196, 196);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+.nav-link {
+  font-size: 18px;
+}

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Filter from './components/Filter';
+import AppNavbar from './components/Navbar';
+import ProductList from './components/ProductList';
+import data from './data.json';
+import './styles/App.css';
 
 function App() {
+  const [filteredProducts, setFilteredProducts] = useState(data);
+
+  const handleCategoryChange = (e) => {
+    const selectedCategory = e.target.value;
+    if (selectedCategory === '') {
+      setFilteredProducts(data);
+    } else {
+      const filtered = data.filter((product) => product.type === selectedCategory);
+      setFilteredProducts(filtered);
+    }
+  };
+
+  const categories = [...new Set(data.map((product) => product.type))];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppNavbar />
+      <div className="container">
+        <Filter categories={ categories } handleCategoryChange={ handleCategoryChange } />
+        <ProductList products={ filteredProducts } />
+      </div>
     </div>
   );
 }
