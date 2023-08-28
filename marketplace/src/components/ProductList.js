@@ -34,11 +34,13 @@ function ProductList({ products }) {
           </Modal.Header>
           <Modal.Body>
             <Card.Img src={ selectedProduct.image_url } />
-            <Card.Text>Tamanhos Disponíveis <br />
-              { selectedProduct.available_sizes.join(', ') }
+            
+            <Card.Text >
+              Tamanhos Disponíveis<br />
+              <span style={{ fontWeight: 'bolder' }}>{ selectedProduct.available_sizes.join(', ') }</span>
             </Card.Text>
-            <Card.Text>R$ { String(selectedProduct.price).replace('.', ',') }</Card.Text>
-            <Card.Text>Descrição <br />
+            <Card.Text style={{ fontWeight: 'bolder' }}>R$ { String(selectedProduct.price).replace('.', ',') }</Card.Text>
+            <Card.Text><span style={{ fontWeight: 'bolder' }}>Descrição</span><br />
               { selectedProduct.details }
             </Card.Text>
             <Modal.Footer className="grid-example">

@@ -1,15 +1,15 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { BiHelpCircle, BiMailSend } from 'react-icons/bi';
 import { BsHeartFill, BsPersonFill } from 'react-icons/bs';
 import { FaCartShopping } from 'react-icons/fa6';
 import { FcSportsMode } from 'react-icons/fc';
 import { ImWhatsapp } from 'react-icons/im';
-import { BiMailSend, BiHelpCircle } from 'react-icons/bi';
 import '../styles/Navbar.css';
 
 function AppNavbar() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg">
 
       <Container className='nav-text-container nav-container'>
         <Nav.Link>Compre pelo Whatsapp
@@ -26,7 +26,7 @@ function AppNavbar() {
         </Nav.Link>
       </Container>
 
-      <Container className='nav-container'>
+      <Container className='nav-container nav-logo'>
         <FcSportsMode size={60} />
         <Navbar.Brand href="#home">Bazar do Esporte</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

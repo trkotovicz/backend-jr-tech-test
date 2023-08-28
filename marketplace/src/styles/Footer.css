@@ -1,0 +1,17 @@
+.footer-elements {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-media-social {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+}
