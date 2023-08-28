@@ -329,6 +329,10 @@ SELECT DISTINCT  j1.nome  AS jogador1 , j2.nome  AS jogador2
 	HAVING  COUNT(*) >  2;
 ```
 
+### _7. Dado o array no arquivo data.json, crie um interface em React.js, CSS e Bootstrap mostre os itens como se fosse um marketplace de roupas._
+
+Abra a pasta **_marketplace_** para rodar a aplicação. Nela, você encontrará mais detalhes de como fazer isso.
+
  ---
 
 Projeto desenvolvido por [Thais R Kotovicz](https://www.linkedin.com/in/thaiskotovicz/).
